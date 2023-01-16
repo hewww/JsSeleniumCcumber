@@ -1,0 +1,40 @@
+{
+  "name": "webloginauto",
+  "version": "1.0.0",
+  "description": "Demo of js web automation",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "./node_modules/.bin/cucumber-js tests/features --require tests/features/support --require tests/step_definitions --world-parameters {\\\"browserName\\\":\\\"chrome\\\"} --format json:tests/results/chrome.json",
+    "testReport": "node ./tests/features/support/generateReport"
+  },
+  "keywords": [
+    "js",
+    "selenium",
+    "automation"
+  ],
+  "author": "mvemjsun",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.10.0",
+    "asserts": "^4.0.2",
+    "cucumber-html-report-generator": "^1.0.33",
+    "express": "4.16.3",
+    "mocha": "^10.2.0",
+    "pug": "2.0.3",
+    "require": "2.4.20"
+  },
+  "devDependencies": {
+    "allure-cucumberjs": "^2.0.0-beta.23",
+    "allure-js-commons": "^2.0.0-beta.23",
+    "chai": "^4.1.2",
+    "cucumber": "6.0.7",
+    "cucumber-html-reporter": "^0.4.0",
+    "cucumberjs-allure2-reporter": "^1.3.0",
+    "karma-allure-reporter": "^1.4.6",
+    "selenium-webdriver": "^3.6.0"
+  },
+  "config": {
+    "port": 9294
+  }
+}
